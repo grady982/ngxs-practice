@@ -1,0 +1,7 @@
+<ng-container *ngIf="orderList$ | async as orderList">
+    <div *ngFor="let choice of choices">
+        <button type="button" class="btn btn-outline-info mt-2" (click)="add(choice)">
+            Add {{ choice.item }}
+        </button>
+    </div>
+</ng-container>

@@ -1,0 +1,24 @@
+<div *ngIf="state$ | async as state">
+  <section class="container mt-3">
+
+    <h1 class="mb-4"><span class="badge badge-warning">McDonald's</span> Meal Bar</h1>
+    
+    <p class="h4">Order ID:<span class="badge badge-success ml-3">{{state.user.OrderID}}</span></p>
+    <p class="h4">User Name:<span class="badge badge-success ml-3">{{state.user.UserName}}</span></p>
+  
+    <div *ngIf="!state.user.UserName">
+      <input class="form-control" type="text" placeholder="@user name" [(ngModel)]="userName">
+      <button class="btn btn-outline-secondary mt-2" 
+        type="button" 
+        [disabled]="!userName" 
+        (click)="addUser(userName)">
+        Name for this order
+      </button>
+    </div>
+
+    <hr>
+
+    <router-outlet></router-outlet>
+
+  </section>
+</div>
