@@ -1,17 +1,15 @@
 # NgxsPractice
 `bootstrap` `angular material` `ngxs`
 
-# 筆記
-
-## NGXS 
+# NGXS 
 state management library 有利於複雜的狀態處理
 
-### Store
+## Store
 > The store is a global state manager that dispatches actions your state containers listen to and provides a way to select data slices out from the global state.
 
 Store 是全域的狀態管理容器，可以指派監聽的事件 `store.dispatch(action)`，並且可以提供取得資料的方式從全域的狀態中 `store.select(state => path)` 
 
-### State
+## State
 > States are classes that define a state container.
 
 State 是一個 Class，他必須定義在狀態管理容器中。
@@ -35,7 +33,7 @@ State 是一個 Class，他必須定義在狀態管理容器中。
 })
 ```
 
-### Action
+## Action
 > Actions can either be thought of as a command which should trigger something to happen, or as the resulting event of something that has already happened.
 Each action contains a type field which is their unique identifier.
  
@@ -48,7 +46,7 @@ export class SetUserName {
 }
 ```
  
-### Select 
+## Select 
 > Selects are functions that slice a specific portion of state from the global state container.
 In CQRS and Redux patterns, we keep READ and WRITE separated. This pattern also exists in NGXS. When we want to read data out of our store, we use a select operator to retrieve this data.
 In NGXS, there are two methods to select state, we can either call the select method on the Store service or use the @Select decorator. 
