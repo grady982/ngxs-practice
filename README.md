@@ -54,7 +54,8 @@ In NGXS, there are two methods to select state, we can either call the select me
 Select 是一個方法可以從全域的狀態管理容器中取得特定部份的 State，
 1. CQRS 命令與查詢責任分離模式
 2. Redux A Predictable State Container for JS Apps
-這種 pattern 也存在於 NGXS 當我們要從 store 讀取資料時，我們可以透過 select 這個 operator 來取得資料
+
+這兩種 pattern 也存在於 NGXS 當我們要從 store 讀取資料時，我們可以透過 select 這個 operator 來取得資料
 在 NGXS 中有兩種取得狀態的方法
 ```
 @Select(ZooState) animals$: Observable<string[]>;
